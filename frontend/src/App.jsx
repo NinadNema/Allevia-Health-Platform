@@ -360,12 +360,30 @@ function App() {
   if (!token) {
     return (
       <div className="auth-page">
-        <div className="auth-card">
+        <section className="auth-story">
           <div className="brand">ALLEVIA</div>
+          <div className="auth-story-copy">
+            <span className="eyebrow">CARE, AT YOUR PACE</span>
+            <h2>A little more clarity for your everyday health.</h2>
+            <p>
+              Keep your health notes, routines, and progress in one thoughtful
+              place.
+            </p>
+          </div>
+          <span className="auth-story-footnote">
+            A personal space for your health journey
+          </span>
+        </section>
 
-          <p className="tagline">Your health. One connected platform.</p>
+        <div className="auth-card">
+          <p className="tagline">YOUR PERSONAL HEALTH SPACE</p>
 
           <h1>{mode === "login" ? "Welcome back" : "Create your account"}</h1>
+          <p className="auth-intro">
+            {mode === "login"
+              ? "Sign in to continue caring for your wellbeing."
+              : "Start keeping your health journey in one place."}
+          </p>
 
           <form onSubmit={submitAuth}>
             {mode === "register" && (
@@ -440,6 +458,7 @@ function App() {
       {/* SIDEBAR */}
       <aside>
         <div className="brand">ALLEVIA</div>
+        <span className="sidebar-kicker">YOUR CARE</span>
 
         <button
           className={`side-item ${activePage === "dashboard" ? "active" : ""}`}
@@ -459,7 +478,7 @@ function App() {
           className={`side-item ${activePage === "screening" ? "active" : ""}`}
           onClick={() => setActivePage("screening")}
         >
-          AI Screening
+          Symptom check-in
         </button>
 
         <button
