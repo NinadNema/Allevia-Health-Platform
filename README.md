@@ -15,15 +15,17 @@
 
 1. [What is Allevia?](#what-is-allevia)
 2. [Features](#features)
-3. [Tech Stack](#tech-stack)
-4. [Project Structure](#project-structure)
-5. [Getting Started](#getting-started)
-6. [Configuration](#configuration)
-7. [API Reference](#api-reference)
-8. [Data Model](#data-model)
-9. [How the Rule-Based Logic Works](#how-the-rule-based-logic-works)
-10. [Security Notes](#security-notes)
-11. [Known Limitations and Roadmap](#known-limitations-and-roadmap)
+3. [Screenshots](#screenshots)
+4. [Tech Stack](#tech-stack)
+5. [Project Structure](#project-structure)
+6. [Getting Started](#getting-started)
+7. [Configuration](#configuration)
+8. [API Reference](#api-reference)
+9. [Data Model](#data-model)
+10. [How the Rule-Based Logic Works](#how-the-rule-based-logic-works)
+11. [Security Notes](#security-notes)
+12. [Known Limitations and Roadmap](#known-limitations-and-roadmap)
+13. [Team](#team)
 
 ---
 
@@ -49,6 +51,33 @@ The project is currently an **MVP**: a working end-to-end foundation (auth, data
 | **Progress summary** | Aggregated view of activity completion, average sleep, total activity minutes and medication adherence. |
 | **Health insights** | Plain-language positive and warning messages generated from your logged data. |
 | **Symptom screening (prototype)** | Tick from six common symptoms and get a low, moderate or elevated indicator with a clear disclaimer. |
+
+## Screenshots
+
+Save your screenshots in `docs/screenshots/` using these file names. The `width` values keep them small on the page, so edit them to make the images larger or smaller.
+
+<p align="center">
+  <img src="docs/screenshots/dashboard.png" alt="Dashboard" width="700">
+</p>
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/medication.png" alt="Medication tracking" width="340"><br>
+      <sub>Medication tracking</sub>
+    </td>
+    <td align="center">
+      <img src="docs/screenshots/progress-insights.png" alt="Progress and insights" width="340"><br>
+      <sub>Progress and insights</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="docs/screenshots/screening.png" alt="Symptom screening prototype" width="340"><br>
+      <sub>Symptom screening (prototype)</sub>
+    </td>
+  </tr>
+</table>
 
 ## Tech Stack
 
@@ -302,6 +331,18 @@ Being upfront about where the MVP stands:
 - **Screening and insights are rule-based.** Replacing or augmenting them with validated clinical tools and ML models is the long-term goal.
 
 Ideas for future work: medication reminders and notifications, charts and trend graphs, caregiver and clinician views, data export, and a hosted deployment.
+
+## Team
+
+This project was built as a group project by:
+
+| Name | Registration No.
+| --- | --- |
+| NINAD NEMAWARKAR | 23BCE10350 |
+| TIWARI SAMARTH | 23BCE11556 |
+| SAURAV KUMAR PANDEY | 23BCE11571 |
+| PRERANA TALUKDAR | 23BCE11395 |
+| SHIVANSH SHARMA | 23BCE11158 |
 
 ## Contributing
 
