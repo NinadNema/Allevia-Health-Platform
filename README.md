@@ -49,8 +49,6 @@ The project is currently an **MVP**: a working end-to-end foundation (auth, data
 
 ## Screenshots
 
-Save your screenshots in `docs/screenshots/` using these file names. The `width` values keep them small on the page, so edit them to make the images larger or smaller.
-
 <p align="center">
   <img src="./screenshots/dashboard.png" alt="Dashboard" width="700">
 </p>
@@ -331,13 +329,13 @@ Ideas for future work: medication reminders and notifications, charts and trend 
 
 This project was built as a group project by:
 
-| Name | Registration No.
+| Name | Registration No. |
 | --- | --- |
-| NINAD NEMAWARKAR | 23BCE10350 |
-| TIWARI SAMARTH | 23BCE11556 |
-| SAURAV KUMAR PANDEY | 23BCE11571 |
-| PRERANA TALUKDAR | 23BCE11395 |
-| SHIVANSH SHARMA | 23BCE11158 |
+| Ninad Nemawarkar | 23BCE10350 |
+| Tiwari Samarth | 23BCE11556 |
+| Saurav Kumar Pandey | 23BCE11571 |
+| Prerana Talukdar | 23BCE11395 |
+| Shivansh Sharma | 23BCE11158 |
 
 ## Contributing
 
