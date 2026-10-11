@@ -2,11 +2,6 @@
 
 > A patient-facing web app that helps people living with neurological and neurodegenerative conditions track medications, daily habits and rehabilitation activities, and see their progress in one place.
 
-![Status](./screenshots/dashboard.png)
-![Backend](./screenshots/medication.png)
-![Frontend](./screenshots/progress-insights.png)
-![Database](./screenshots/screening.png)
-
 > **Medical disclaimer:** Allevia is a prototype for informational and self-tracking purposes only. The screening feature and health insights are simple rule-based indicators. They are **not** a medical diagnosis and are not a substitute for advice from a qualified healthcare professional.
 
 ---
@@ -57,23 +52,23 @@ The project is currently an **MVP**: a working end-to-end foundation (auth, data
 Save your screenshots in `docs/screenshots/` using these file names. The `width` values keep them small on the page, so edit them to make the images larger or smaller.
 
 <p align="center">
-  <img src="docs/screenshots/dashboard.png" alt="Dashboard" width="700">
+  <img src="./screenshots/dashboard.png" alt="Dashboard" width="700">
 </p>
 
 <table>
   <tr>
     <td align="center">
-      <img src="docs/screenshots/medication.png" alt="Medication tracking" width="340"><br>
+      <img src="./screenshots/medication.png" alt="Medication tracking" width="340"><br>
       <sub>Medication tracking</sub>
     </td>
     <td align="center">
-      <img src="docs/screenshots/progress-insights.png" alt="Progress and insights" width="340"><br>
+      <img src="./screenshots/progress-insights.png" alt="Progress and insights" width="340"><br>
       <sub>Progress and insights</sub>
     </td>
   </tr>
   <tr>
     <td align="center" colspan="2">
-      <img src="docs/screenshots/screening.png" alt="Symptom screening prototype" width="340"><br>
+      <img src="./screenshots/screening.png" alt="Symptom screening prototype" width="340"><br>
       <sub>Symptom screening (prototype)</sub>
     </td>
   </tr>
