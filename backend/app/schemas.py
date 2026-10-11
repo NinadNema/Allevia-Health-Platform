@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime
 from pydantic import BaseModel, EmailStr, ConfigDict
 from typing import Optional
 
@@ -52,6 +52,22 @@ class LifestyleRequest(BaseModel):
     activity_minutes: Optional[int] = None
     mood: Optional[str] = None
     symptoms: Optional[str] = None
+
+class ActivityRequest(BaseModel):
+    title: str
+    description: Optional[str] = None
+    category: str
+    duration_minutes: Optional[int] = None
+    difficulty: Optional[str] = None
+    scheduled_date: Optional[date] = None
+
+
+class ActivityResponse(ActivityRequest):
+    id: int
+    completed: bool
+    completed_at: Optional[datetime] = None
+
+    model_config = ConfigDict(from_attributes=True)
 
 
 class ScreeningRequest(BaseModel):

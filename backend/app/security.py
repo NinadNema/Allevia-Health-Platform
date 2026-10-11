@@ -1,8 +1,15 @@
+import os
 from datetime import datetime, timedelta, timezone
+
 from jose import jwt
 from passlib.context import CryptContext
 
-SECRET_KEY = "allevia-dev-secret-change-before-production"
+SECRET_KEY = os.environ.get("ALLEVIA_SECRET_KEY")
+if not SECRET_KEY:
+    raise RuntimeError(
+        "Set the ALLEVIA_SECRET_KEY environment variable before starting the API"
+    )
+
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24
 

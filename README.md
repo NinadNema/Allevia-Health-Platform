@@ -3,30 +3,35 @@
 AI-assisted healthcare platform for neurological/neurodegenerative condition support.
 
 ## Current MVP
-- JWT authentication
-- Patient profile
-- Medication management + adherence
-- Lifestyle tracking
-- AI-assisted screening endpoint (demo/rule-based risk scoring)
-- Dashboard with summary data
+- Patient registration/login and profile
+- Medication management and adherence tracking
+- Lifestyle logs and rehabilitation activities
+- Progress summaries and rule-based health insights
+- Neurological symptom screening prototype (not a medical diagnosis)
 
 ## Stack
 - Frontend: React + Vite
 - Backend: Python FastAPI
-- Database: SQLite for local development (easy to replace with PostgreSQL)
+- Database: SQLite by default; PostgreSQL is configurable through `DATABASE_URL`
 - Auth: JWT
 - Charts/UI: basic React/CSS
 
 ## Run
 
 ### Backend
-```bash
+```powershell
 cd backend
 python -m venv venv
-venv\Scripts\activate
+.\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
+$env:ALLEVIA_SECRET_KEY = (& python -c "import secrets; print(secrets.token_urlsafe(32))")
 uvicorn app.main:app --reload
 ```
+
+SQLite is used by default for local development. To use PostgreSQL, set
+`DATABASE_URL` to a SQLAlchemy URL such as
+`postgresql+psycopg://user:password@localhost:5432/allevia` before starting the
+API. Keep credentials and signing keys out of source control.
 
 ### Frontend
 Open another terminal:

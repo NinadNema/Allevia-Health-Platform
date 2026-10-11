@@ -2,7 +2,16 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .database import Base, engine
-from .routes import auth, patients, medications, lifestyle, screening
+from .routes import (
+    activities,
+    auth,
+    insights,
+    lifestyle,
+    medications,
+    patients,
+    progress,
+    screening,
+)
 
 Base.metadata.create_all(bind=engine)
 
@@ -21,6 +30,9 @@ app.include_router(patients.router, prefix="/api/patients", tags=["Patient Profi
 app.include_router(medications.router, prefix="/api/medications", tags=["Medication"])
 app.include_router(lifestyle.router, prefix="/api/lifestyle", tags=["Lifestyle"])
 app.include_router(screening.router, prefix="/api/screening", tags=["Disease Screening"])
+app.include_router(activities.router)
+app.include_router(progress.router)
+app.include_router(insights.router)
 
 
 @app.get("/")

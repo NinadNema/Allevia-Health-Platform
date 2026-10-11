@@ -581,3 +581,161 @@ header h1 {
     width: 100%;
   }
 }
+
+.symptom-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.symptom-chip {
+  padding: 10px 16px;
+  border: 1px solid #d7dce5;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.symptom-chip:hover {
+  border-color: #4f46e5;
+}
+
+.symptom-chip.selected {
+  background: #4f46e5;
+  color: white;
+  border-color: #4f46e5;
+}
+
+.screening-result {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.result-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-top h3 {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.result-rank {
+  font-weight: bold;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 12px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4f46e5;
+  border-radius: 10px;
+}
+
+.matched-symptoms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.matched-symptoms span {
+  padding: 5px 10px;
+  border-radius: 15px;
+  background: #f1f5f9;
+  font-size: 13px;
+}
+
+.warning-box {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff7ed;
+}
+
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.insight-card {
+  display: flex;
+  gap: 15px;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.insight-card.positive {
+  background: #f0fdf4;
+}
+
+.insight-card.warning {
+  background: #fff7ed;
+}
+
+.insight-card.info {
+  background: #eff6ff;
+}
+
+.insight-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.positive .insight-icon {
+  background: #dcfce7;
+}
+
+.warning .insight-icon {
+  background: #fed7aa;
+}
+
+.info .insight-icon {
+  background: #dbeafe;
+}
+
+.insight-content {
+  flex: 1;
+}
+
+.insight-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.insight-header h3 {
+  margin: 0;
+}
+
+.insight-content p {
+  margin-bottom: 0;
+  color: #64748b;
+}
+
+.insight-category {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  background: #f1f5f9;
+}

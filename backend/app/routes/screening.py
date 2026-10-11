@@ -1,40 +1,64 @@
+from typing import Literal
+
 from fastapi import APIRouter, Depends
+from pydantic import BaseModel, Field
+
 from ..dependencies import get_current_user
-from ..models import User
-from ..schemas import ScreeningRequest
 
 router = APIRouter()
 
 
+SCREENING_SYMPTOMS = (
+    "tremor",
+    "slow_movement",
+    "balance_difficulty",
+    "speech_difficulty",
+    "memory_difficulty",
+    "sleep_problem",
+)
+
+ScreeningSymptom = Literal[
+    "tremor",
+    "slow_movement",
+    "balance_difficulty",
+    "speech_difficulty",
+    "memory_difficulty",
+    "sleep_problem",
+]
+
+
+class ScreeningRequest(BaseModel):
+    symptoms: list[ScreeningSymptom] = Field(min_length=1)
+
+
 @router.post("")
-def screen(
+def screen_disease(
     data: ScreeningRequest,
-    user: User = Depends(get_current_user),
+    current_user=Depends(get_current_user),
 ):
-    # Prototype screening score for MVP demonstration.
-    # This is NOT a clinical diagnostic model.
-    factors = [
-        data.tremor,
-        data.slow_movement,
-        data.balance_difficulty,
-        data.speech_difficulty,
-        data.memory_difficulty,
-        data.sleep_problem,
-    ]
-    score = round((sum(factors) / len(factors)) * 100)
+    score = round(len(set(data.symptoms)) / len(SCREENING_SYMPTOMS) * 100)
 
     if score >= 67:
-        level = "High"
+        level = "Elevated"
     elif score >= 34:
         level = "Moderate"
     else:
         level = "Low"
 
     return {
+        "symptoms_checked": data.symptoms,
         "score": score,
         "risk_level": level,
         "message": (
-            "This result is a screening-support indicator and not a diagnosis. "
-            "Consult a qualified healthcare professional for medical evaluation."
+            f"The prototype screening indicator is {level.lower()} based "
+            "on the symptoms selected."
+        ),
+        "disclaimer": (
+            "This rule-based prototype is for informational purposes only. "
+            "The percentage reflects the number of selected symptoms, not "
+            "the probability of having a disease. "
+            "It is not a medical diagnosis. "
+            "Please consult a qualified healthcare professional about "
+            "concerning symptoms."
         ),
     }
